@@ -35,7 +35,7 @@ public class OASConfigScanClassTest extends AppTestBase {
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "airlines.war")
                 .addPackages(true, "org.eclipse.microprofile.openapi.apps.airlines")
-                .addAsManifestResource("class-microprofile-config.properties", "microprofile-config.properties");
+                .addAsWebInfResource("class-microprofile-config.properties", "classes/META-INF/microprofile-config.properties");
     }
     
     @RunAsClient
