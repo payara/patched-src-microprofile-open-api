@@ -42,7 +42,7 @@ public class StaticDocumentTest extends AppTestBase {
     @Deployment(name = "static")
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "static.war")
-                .addAsManifestResource("simpleapi.yaml", "openapi.yaml");
+                .addAsWebInfResource("simpleapi.yaml", "classes/META-INF/openapi.yaml");
     }
     
     @RunAsClient

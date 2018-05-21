@@ -47,7 +47,7 @@ public class AirlinesAppTest extends AppTestBase {
     public static WebArchive createDeployment() {
         return ShrinkWrap.create(WebArchive.class, "airlines.war")
                 .addPackages(true, "org.eclipse.microprofile.openapi.apps.airlines")
-                .addAsManifestResource("openapi.yaml", "openapi.yaml");
+                .addAsWebInfResource("openapi.yaml", "classes/META-INF/openapi.yaml");
     }
 
     @RunAsClient

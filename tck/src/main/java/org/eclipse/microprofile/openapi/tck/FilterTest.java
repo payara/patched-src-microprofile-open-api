@@ -38,8 +38,8 @@ public class FilterTest extends AppTestBase {
         return ShrinkWrap.create(WebArchive.class, "airlinesFiltered.war")
                 .addPackages(true, "org.eclipse.microprofile.openapi.apps.airlines")
                 .addPackages(true, "org.eclipse.microprofile.openapi.filter")
-                .addAsManifestResource("openapi.yaml", "openapi.yaml")
-                .addAsManifestResource("microprofile-config-filter.properties", "microprofile-config.properties");
+                .addAsWebInfResource("openapi.yaml", "classes/META-INF/openapi.yaml")
+                .addAsWebInfResource("microprofile-config-filter.properties", "classes/META-INF/microprofile-config.properties");
     }
 
     @RunAsClient

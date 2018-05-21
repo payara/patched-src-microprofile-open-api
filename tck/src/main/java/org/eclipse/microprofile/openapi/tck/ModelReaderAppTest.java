@@ -45,7 +45,7 @@ public class ModelReaderAppTest extends AppTestBase {
         return ShrinkWrap.create(WebArchive.class, "airlinesReader.war")
                 .addPackages(true, "org.eclipse.microprofile.openapi.apps.airlines")
                 .addPackages(true, "org.eclipse.microprofile.openapi.reader")
-                .addAsManifestResource("microprofile-reader.properties", "microprofile-config.properties");
+                .addAsWebInfResource("microprofile-reader.properties", "classes/META-INF/microprofile-config.properties");
     }
 
     @RunAsClient
